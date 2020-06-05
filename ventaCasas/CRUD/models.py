@@ -11,5 +11,5 @@ class houses(models.Model):
     bathRooms = models.IntegerField()
     parking = models.IntegerField()
     price = models.IntegerField()
-    image = models.ImageField(default='none1.jpg')
+    image = models.ImageField(default='none.png')
 
