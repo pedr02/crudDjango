@@ -1,0 +1,26 @@
+{% extends 'CRUD/base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block content %}
+<div class="row text-center">
+    <div class="col-md-12 mt-4 - md-6">
+        <h3>Detalles de la casa</h3>
+    </div>
+</div>
+
+<p><span style="font-weight: bold">Ciudad</span> <br> {{object.location}}</p>
+<p><span style="font-weight: bold">Dirección:</span> <br> {{object.address}}</p>
+<p><span style="font-weight: bold">Dimension:</span> <br> {{object.area}} m</p>
+<p><span style="font-weight: bold">Número de Habitaciones:</span> <br> {{object.rooms}}</p>
+<p><span style="font-weight: bold">Número de baños:</span> <br> {{object.bathRooms}}</p>
+<p><span style="font-weight: bold">Número de Parqueaderos:</span> <br> {{object.parking}}</p>
+<p><span style="font-weight: bold">precio:</span> <br> {{object.price}}</p>
+<p><span style="font-weight: bold">Imagen:</span>
+    <br> <img src="{% static 'images/'%}{{object.image}}" alt="{{object.id}}" class="img-fluid"> </p>
+
+<!-- Botón para volver a la vista principal (Home) -->
+<a href="/casas/" type="submit" class="btn btn-primary">Volver</a>
+
+
+{% endblock %}
